@@ -310,7 +310,7 @@ function _update!(p::PPOPolicy, t::Any)
                     log_p′ₐ = log_p′[a]
                     # entropy_loss = -sum(p′ .* log_p′) * 1 // size(p′, 2)  
                     
-                    ### ENTROPY LOSS CORRECTION
+                    ##### ENTROPY LOSS CORRECTION
                     sum_p_logp = 0.0
                     for (i,val) in enumerate(p′)
                         if val != 0
